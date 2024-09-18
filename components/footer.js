@@ -21,9 +21,9 @@ template.innerHTML = `
                     </a>
                 </li>
                 <li class="footer__item">
-                    <a class="footer__info" href="mailto:support@sitino.com">
+                    <a class="footer__info" href="mailto:mmdghkmq@gmail.com">
                         ایمیل:
-                        support@sitino.com
+                        mmdghkmq@gmail.com
                     </a>
                 </li>
             </ul>
