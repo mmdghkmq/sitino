@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/components.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/sign.css">
+        <link rel="stylesheet" href="./styles/responsive.css">
+        <link rel="stylesheet" href="./styles/grid.css">
+        <script src="./scripts/sign.js" defer></script>
+        <script src="./scripts/modules.js" type="module" defer></script>
+        <title>ثبت‌نام/ورود</title>
+    </head>
+    <body>
+        <header class="sign header">
+            <div class="container">
+                <custom-nav></custom-nav>
+                <div class="registration row">
+                    <div class="register-success">
+                        <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                        <p class="success-text">ثبت‌نام با موفقیت انجام شد!</p>
+                    </div>
+                    <section class="registration__sign col col-md-6 col-lg-4 ">
+                        <div class="form-header">
+                            <p class="form-header__title">
+                                ثبت‌نام در سایت
+                            </p>
+                            <div class="form-header__toggle">
+                                <div class="form-header__toggle-bg"></div>
+                                <div class="form-header__toggle-btn sign-up-btn">ثبت نام</div>
+                                <div class="form-header__toggle-btn sign-in-btn">ورود</div>
+                            </div>
+                        </div>
+                        <div class="form-body">
+                            <form class="form-sign-up" action="#">
+                                <div class="sign-up-email form-entry">
+                                    <span class="sign-up-email__error">آدرس ایمیل معتبر نیست!</span>
+                                    <svg class="sign-up-email__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg class="sign-up-email__valid-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    <label class="form-label" for="sign-up-email-input_">ایمیل</label>
+                                    <input class="sign-up-email__input form-input" id="sign-up-email-input_" type="text" name=""  placeholder="ایمیل خود را وارد کنید..." spellcheck="false">
+                                </div>
+                                <div class="sign-up-password form-entry">
+                                    <span class="sign-up-password__error">
+                                        رمز عبور باید شامل حداقل 8 کاراکتر و تلفیقی از حروف(بزرگ و کوچک) و اعداد باشد.
+
+                                    </span>
+                                    <svg class="sign-up-password__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg class="sign-up-password__valid-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    <svg class="sign-up-password__hide-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#BDC3C7" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                        <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                                        <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                                        <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                                    </svg>
+                                    <svg class="sign-up-password__show-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#BDC3C7" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <label class="form-label" for="sign-up-password-input_">رمز عبور</label>
+                                    <input class="sign-up-password__input form-input" id="sign-up-password-input_" type="password" name=""  placeholder="****************" spellcheck="false">
+                                </div>
+                                <div class="sign-up-password-repeat form-entry">
+                                    <span class="sign-up-password-repeat__error">
+                                        رمز عبورهای وارد شده یکسان نیست!
+                                    </span>
+                                    <svg class="sign-up-password-repeat__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                    <svg class="sign-up-password-repeat__valid-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                    </svg>
+                                    <svg class="sign-up-password-repeat__hide-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#BDC3C7" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                        <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                                        <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                                        <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                                    </svg>
+                                    <svg class="sign-up-password-repeat__show-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#BDC3C7" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <label class="form-label" for="pass2">تکرار رمز عبور</label>
+                                    <input class="sign-up-password-repeat__input form-input" type="password" name="" id="pass2" placeholder="****************" spellcheck="false">
+                                </div>
+                                <div class="sign-up-agree">
+                                    <input class="sign-up-agree__input" type="checkbox" name="" id="sign-up-agree__input_">
+                                    <label class="form-label" for="sign-up-agree__input_">شرایط و قوانین را مطالعه کرده‌ام و می‌پذیرم</label>
+                                </div>
+                                <input class="sign-up-submit" type="submit" value="ثبت‌ نام" disabled>
+                            </form>
+                            <form class="form-sign-in" action="">
+                                <div class="sign-in-email form-entry">
+                                    <label class="form-label" for="email2">ایمیل</label>
+                                    <input class="sign-in-email__input form-input" id="email2" type="email" name="" placeholder="ایمیل خود را وارد کنید..." spellcheck="false">
+                                </div>
+                                <div class="sign-in-password form-entry">
+                                    <svg class="sign-in-password__hide-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#BDC3C7" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                        <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                                        <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                                        <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                                    </svg>
+                                    <svg class="sign-in-password__show-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#BDC3C7" class="bi bi-eye" viewBox="0 0 16 16">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <label class="form-label" for="sign-in-password__input_">رمز عبور</label>
+                                    <input class="sign-in-password__input form-input" id="sign-in-password__input_" type="password" name="" placeholder="****************" spellcheck="false">
+                                </div>
+                                <div class="sign-in-agree">
+                                    <input class="sign-in-agree__input" type="checkbox" name="" id="sign-in-agree__input_" spellcheck="false">
+                                    <label class="form-label" for="sign-in-agree__input_">مرا به خاطر بسپارید</label>
+                                </div>
+                                <input class="sign-in-submit form-submit" type="submit" value="ورود" disabled>
+                            </form>
+                        </div>
+                        <div class="form-footer">
+                            <hr class="h-row">
+                            <p class="form-footer__or">یا</p>
+                            <div class="form-footer__sign-width-google">
+                                <svg id="form-footer__google-logo" width="36" height="36" style="enable-background:new 0 0 150 150;" version="1.1" viewBox="0 0 150 150" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">.st0{fill:#1A73E8;}.st1{fill:#EA4335;}.st2{fill:#4285F4;}.st3{fill:#FBBC04;}.st4{fill:#34A853;}.st5{fill:#4CAF50;}.st6{fill:#1E88E5;}.st7{fill:#E53935;}.st8{fill:#C62828;}.st9{fill:#FBC02D;}.st10{fill:#1565C0;}.st11{fill:#2E7D32;}.st12{fill:#F6B704;}.st13{fill:#E54335;}.st14{fill:#4280EF;}.st15{fill:#34A353;}.st16{clip-path:url(#SVGID_2_);}.st17{fill:#188038;}.st18{opacity:0.2;fill:#FFFFFF;enable-background:new    ;}.st19{opacity:0.3;fill:#0D652D;enable-background:new    ;}.st20{clip-path:url(#SVGID_4_);}.st21{opacity:0.3;fill:url(#_45_shadow_1_);enable-background:new    ;}.st22{clip-path:url(#SVGID_6_);}.st23{fill:#FA7B17;}.st24{opacity:0.3;fill:#174EA6;enable-background:new    ;}.st25{opacity:0.3;fill:#A50E0E;enable-background:new    ;}.st26{opacity:0.3;fill:#E37400;enable-background:new    ;}.st27{fill:url(#Finish_mask_1_);}.st28{fill:#FFFFFF;}.st29{fill:#0C9D58;}.st30{opacity:0.2;fill:#004D40;enable-background:new    ;}.st31{opacity:0.2;fill:#3E2723;enable-background:new    ;}.st32{fill:#FFC107;}.st33{opacity:0.2;fill:#1A237E;enable-background:new    ;}.st34{opacity:0.2;}.st35{fill:#1A237E;}.st36{fill:url(#SVGID_7_);}.st37{fill:#FBBC05;}.st38{clip-path:url(#SVGID_9_);fill:#E53935;}.st39{clip-path:url(#SVGID_11_);fill:#FBC02D;}.st40{clip-path:url(#SVGID_13_);fill:#E53935;}.st41{clip-path:url(#SVGID_15_);fill:#FBC02D;}</style>
+                                    <g><path class="st14" d="M120,76.1c0-3.1-0.3-6.3-0.8-9.3H75.9v17.7h24.8c-1,5.7-4.3,10.7-9.2,13.9l14.8,11.5   C115,101.8,120,90,120,76.1L120,76.1z"/><path class="st15" d="M75.9,120.9c12.4,0,22.8-4.1,30.4-11.1L91.5,98.4c-4.1,2.8-9.4,4.4-15.6,4.4c-12,0-22.1-8.1-25.8-18.9   L34.9,95.6C42.7,111.1,58.5,120.9,75.9,120.9z"/><path class="st12" d="M50.1,83.8c-1.9-5.7-1.9-11.9,0-17.6L34.9,54.4c-6.5,13-6.5,28.3,0,41.2L50.1,83.8z"/><path class="st13" d="M75.9,47.3c6.5-0.1,12.9,2.4,17.6,6.9L106.6,41C98.3,33.2,87.3,29,75.9,29.1c-17.4,0-33.2,9.8-41,25.3   l15.2,11.8C53.8,55.3,63.9,47.3,75.9,47.3z"/></g>
+                                </svg>
+                                <p class="form-footer__caption">ثبت‌نام/ ورود با حساب گوگل</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="registration__description col-md-6 col-lg-8">
+                        <div class="context">
+                            <span class="logo-pink">سایتینو</span>
+                            <p class="sign-title">
+                                با ثبت نام در سایتینو از مشاوره رایگان و خدمات کامل ما بهره‌مند شوید!
+                            </p>
+                            <div class="alerts">
+                                <div class="alert">
+                                    <p class="alert__attention">توجه!</p>
+                                    <p class="alert__description">لطفا در وارد کردن آدرس ایمیل و رمز عبور خود نهایت دقت را به عمل آورید.</p>
+                                </div>
+                                <div class="alert">
+                                    <p class="alert__attention">توجه!</p>
+                                    <p class="alert__description">نام کاربری شما در سایت همان آدرس ایمیل‌تان خواهد بود.</p>
+                                </div>
+                                <div class="alert">
+                                    <p class="alert__attention">توجه!</p>
+                                    <p class="alert__description">ثبت‌نام شما به معنای قبول شرایط و قوانین است.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </header>
+        <footer class="footer">
+            <div class="container">
+                <custom-footer></custom-footer>
+            </div>
+        </footer>
+    </body>
+</html>

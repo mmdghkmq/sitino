@@ -1,0 +1,247 @@
+@media screen and (max-width: 1200px){
+    /* Header */
+    .header-content__title {
+        font-size: 2.5rem;
+    }
+    /* Footer */
+    .news-letters-form__email{
+        width: 70%;
+    }
+    /* Contact Us */
+    .social-item__children{
+        height: 8rem;
+    }
+    /* dashboard */
+    .site-types__item {
+        width: 7rem;
+        padding: 1rem 0;
+    }
+    .name-selection__input{
+        width: 6rem;
+    }
+    .setting__username__content .alert{
+        font-size: 0.8rem;
+    }
+    .username-wrapper,
+    .username-password{
+        width: 55%;
+    }
+}
+@media screen and (max-width: 992px){
+    /* Header */
+    .header-content__title{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    /* Nav */
+    .logo{
+        padding-right: 8rem;
+    }
+    .menu-btn{
+        display: flex;
+    }
+    .menu-holder__list{
+        display: none;
+    }
+    /* Footer */
+    .news-letters-form__email{
+        width: 80%;
+    }
+    /* Contact Us */
+    .social-icon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .social-item__children{
+        height: 6rem;
+    }
+    /* Sign */
+    .registration__description .logo-pink{
+        font-size: 6rem;
+        padding-top: 6rem;
+    }
+    .sign-title {
+        font-size: 1.2rem;
+    }
+    .alert__description{
+        font-size: 0.9rem;
+    }
+    /* dashboard */
+    .screen-size-alert{
+        visibility: visible;
+    }
+}
+@media screen and (max-width: 768px){
+    /* Header */
+    .header {
+        height: auto;
+        border-radius: 0;
+        padding-bottom: 4rem;
+    }
+    .header::after {
+        display: none;
+    }
+    .header-section{
+        margin-top: 4rem;
+    }
+    .header-content__title{
+        font-size: 3rem;
+        line-height: 4rem;
+        text-align: center;
+    }
+    .header-content__discuss{
+        margin-top: 3rem;
+    }
+    .header-content__button{
+        margin: 1rem auto 0 auto;
+    }
+    .header-figure__img{
+        width: 60%;
+        margin-top: 4rem;
+    }
+    /* Nav */
+    .counseling-btn{
+        display: none;
+    }
+    .mobile-menu__items:nth-child(6){
+        display: block;
+    }
+    .logo{
+        padding-right: 0;
+    }
+    /* Best Choose */
+    .best-choose .title{
+        text-align: center;
+    }
+    /* Operation */
+    .operation-children {
+        margin-bottom: 2rem;
+    }
+    /* Contact Us */
+    .social-icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .social-item__children{
+        height: 4rem;
+    }
+    /* Sign */
+    .registration__description{
+        display: none;
+    }
+    /* dashboard */
+    .alert-text {
+        max-width: 24rem;
+        font-size: 1.5rem;
+    }
+
+
+
+    .build-website{
+        padding-top: 4rem;
+    }
+    .build-website__discuss{
+        margin: 1rem 0 2rem 0;
+    }
+    .build-website__img{
+        width: 50%;
+    }
+    .guide__content__imgs{
+        width: 70%;
+        margin-bottom: 0;
+    }
+    .contact-us-content__title{
+        text-align: center;
+    }
+    .contact-us-content__discuss{
+        display: none;
+    }
+}
+@media screen and (max-width: 576px){
+    /* Header */
+    .header-content__discuss{
+        margin-top: 2rem;
+    }
+    .header-figure__img{
+        width: 80%;
+    }
+    /* Footer */
+    .footer{
+        text-align: center;
+    }
+    .footer__link{
+        justify-content: center;
+    }
+    .news-letters-form{
+        align-items: center;
+    }
+    .news-letters-form__email{
+        width: 100%;
+    }
+    /* Contact Us */
+    .contact-us-form{
+        width: 100%;
+    }
+    /* Contact Us */
+    .social-icon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .social-item__children{
+        height: 6rem;
+        margin-bottom: 2rem;
+    }
+    /* Guide */
+    .section__img{
+        width: 70%;
+    }
+    /* dashboard */
+    .alert-img{
+        width: 80%;
+    }
+
+
+
+    .build-website__discuss{
+        display: none;
+    }
+    .build-website__img{
+        margin-top: 3rem;
+        width: 70%;
+    }
+}
+@media screen and (max-width: 420px){
+    /* Header */
+    .header-content__title {
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+    .header-figure__img{
+        width: 80%;
+    }
+    /* Contact Us */
+    .social-icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .social-item__children{
+        height: 4rem;
+    }
+    /* Sign */
+    .sign-up-agree .form-label, .sign-in-agree .form-label {
+        font-size: 0.7rem;
+    }
+    .form-footer__caption{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 320px){
+}
+
+@media screen and (min-width: 1400px){
+    /* Header */
+    .header-figure__img{
+        width: 55%;
+    }
+}

@@ -1,0 +1,222 @@
+// ======================================================= Toggle Bg Configuration ===========================================================//
+const selectSignTitle = document.querySelector(".main__register__head__title");
+const selectToggleBg = document.querySelector(".main__register__head__toggle__bg");
+const selectSignUpBtn = document.querySelector(".main__register__head__toggle__sign-up");
+const selectSignInBtn = document.querySelector(".main__register__head__toggle__sign-in");
+const selectSignUpPart = document.querySelector(".main__register__body__sign-up");
+const selectSignInPart = document.querySelector(".main__register__body__sign-in");
+
+selectSignUpBtn.onclick = ()=>{
+    selectToggleBg.style.right = 0;
+    selectSignUpBtn.style.color = "var(--white)";
+    selectSignInBtn.style.color = "inherit";
+    selectSignUpPart.style.right = "0";
+    selectSignInPart.style.right = "30rem";
+    selectSignTitle.innerText = "ثبت‌نام در سایت";
+};
+selectSignInBtn.onclick = ()=>{
+    selectToggleBg.style.right = getComputedStyle(selectSignUpBtn).getPropertyValue("width");
+    selectSignInBtn.style.color = "var(--white)";
+    selectSignUpBtn.style.color = "inherit";
+    selectSignUpPart.style.right = "-30rem";
+    selectSignInPart.style.right = "0";
+    selectSignTitle.innerText = "ورود به سایت";
+
+};
+
+
+
+// ======================================================== Submit Configuration ===========================================================//
+const selectSubmitBtn = document.querySelector(".main__register__body__sign-up__register");
+function enableSubmitBtn(){
+    if(isInputOk && isPassword1Ok && isPassword2Ok && isChecked){
+        selectSubmitBtn.disabled = false;
+        selectSubmitBtn.classList.add("main__register__body__sign-up__register--active");
+    }
+    else{
+        selectSubmitBtn.disabled = true;
+        selectSubmitBtn.classList.remove("main__register__body__sign-up__register--active");
+    }
+}
+
+
+
+// ========================================================= Email Configuration ============================================================//
+const selectEmailInput = document.querySelector(".main__register__body__sign-up__email");
+const selectInvalidBtn = document.querySelector(".main__resister__body__email .main__register__body__sign-up__invalid-btn");
+const selectValidBtn = document.querySelector(".main__resister__body__email .main__register__body__sign-up__valid-btn");
+const selectErrorMessage = document.querySelector(".main__register__body__sign-up__error");
+const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+let isInputOk = null;
+
+let emailInputValidation = () => {
+    if(emailRegex.test(selectEmailInput.value)){
+        selectValidBtn.style.display = "none";
+        selectValidBtn.style.display = "block";
+        selectEmailInput.style.border = "1px solid #27ae60";
+        isInputOk = true;
+    }
+    else{
+        if(selectEmailInput.value.length === 0){
+            selectInvalidBtn.style.display = "none";
+            selectValidBtn.style.display = "none";
+            selectEmailInput.style.border = "1px solid var(--gray)";
+        }
+        else{
+            selectValidBtn.style.display = "none";
+            selectInvalidBtn.style.display = "block";
+            selectEmailInput.style.border = "1px solid #e74c3c";
+            selectInvalidBtn.onmouseenter = ()=>{
+                selectErrorMessage.classList.add("main__register__body__sign-up__error--show");
+            };
+            selectInvalidBtn.onmouseleave = ()=>{
+                selectErrorMessage.classList.remove("main__register__body__sign-up__error--show");
+            };
+        }
+        isInputOk = false;
+    }
+    enableSubmitBtn();
+};
+selectEmailInput.onkeyup = emailInputValidation;
+
+
+
+// ======================================================== Password1 Configuration ===========================================================//
+const selectPassword1Input = document.querySelector(".main__resister__body__password-1__input");
+const selectPassword1InvalidBtn = document.querySelector(".main__resister__body__password-1 .main__register__body__sign-up__invalid-btn")
+const selectPassword1validBtn = document.querySelector(".main__resister__body__password-1 .main__register__body__sign-up__valid-btn")
+const selectPassword1ErrorMessage = document.querySelector(".main__resister__body__password-1__error");
+const selectHidePassword1Btn = document.querySelector(".main__register__body__sign-up__hide-password-1");
+const selectShowPassword1Btn = document.querySelector(".main__register__body__sign-up__hide-password-1--show");
+const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+let isPassword1Ok = null;
+
+let password1Validation = () => {
+    password2Validation();
+    selectHidePassword1Btn.style.fill = "#000";
+    selectShowPassword1Btn.style.fill = "#000";
+    if(passwordRegex.test(selectPassword1Input.value)){
+        selectPassword1InvalidBtn.style.display = "none";
+        selectPassword1validBtn.style.display = "block";
+        selectPassword1Input.style.border = "1px solid #27ae60";
+        isPassword1Ok = true;
+    }
+    else{
+        if(selectPassword1Input.value.length === 0){
+            selectHidePassword1Btn.style.fill = "#BDC3C7";
+            selectShowPassword1Btn.style.fill = "#BDC3C7";
+            selectPassword1validBtn.style.display = "none";
+            selectPassword1InvalidBtn.style.display = "none";
+            selectPassword1Input.style.border = "1px solid var(--gray)";
+        }
+        else{
+            selectPassword1validBtn.style.display = "none";
+            selectPassword1InvalidBtn.style.display = "block";
+            selectPassword1Input.style.border = "1px solid #e74c3c";
+            selectPassword1InvalidBtn.onmouseenter = ()=>{
+                selectPassword1ErrorMessage.classList.add("main__register__body__sign-up__error--show");
+            };
+            selectPassword1InvalidBtn.onmouseleave = ()=>{
+                selectPassword1ErrorMessage.classList.remove("main__register__body__sign-up__error--show");
+            };
+        }
+        isPassword1Ok = false;
+    }
+    enableSubmitBtn();
+}
+selectPassword1Input.onkeyup = password1Validation;
+
+let showOrHidePassword = () => {
+    if(selectPassword1Input.type === "password"){
+        selectPassword1Input.type = "text";
+        selectHidePassword1Btn.style.display = "none";
+        selectShowPassword1Btn.style.display = "block";
+        selectPassword1Input.focus();
+    }
+    else{
+        selectPassword1Input.type = "password";
+        selectShowPassword1Btn.style.display = "none";
+        selectHidePassword1Btn.style.display = "block";
+        selectPassword1Input.focus();
+    }
+}
+selectHidePassword1Btn.onclick = showOrHidePassword;
+selectShowPassword1Btn.onclick = showOrHidePassword;
+
+
+
+// ======================================================== Password2 Configuration ===========================================================//
+const selectPassword2Input = document.querySelector(".main__resister__body__password-2__input");
+const selectPassword2InvalidBtn = document.querySelector(".main__resister__body__password-2 .main__register__body__sign-up__invalid-btn")
+const selectPassword2validBtn = document.querySelector(".main__resister__body__password-2 .main__register__body__sign-up__valid-btn")
+const selectPassword2ErrorMessage = document.querySelector(".main__resister__body__password-2__error");
+const selectHidePassword2Btn = document.querySelector(".main__register__body__sign-up__hide-password-2");
+const selectShowPassword2Btn = document.querySelector(".main__register__body__sign-up__hide-password-2--show");
+let isPassword2Ok = null;
+
+let password2Validation = () => {
+    selectHidePassword2Btn.style.fill = "#000";
+    selectShowPassword2Btn.style.fill = "#000";
+    if(selectPassword2Input.value ===  selectPassword1Input.value && !(selectPassword2Input.value.length === 0)){
+        selectPassword2InvalidBtn.style.display = "none";
+        selectPassword2validBtn.style.display = "block";
+        selectPassword2Input.style.border = "1px solid #27ae60";
+        isPassword2Ok = true;
+    }
+    else{
+        if(selectPassword2Input.value.length === 0){
+            selectHidePassword2Btn.style.fill = "#BDC3C7";
+            selectShowPassword2Btn.style.fill = "#BDC3C7";
+            selectPassword2validBtn.style.display = "none";
+            selectPassword2InvalidBtn.style.display = "none";
+            selectPassword2Input.style.border = "1px solid var(--gray)";
+        }
+        else{
+            selectPassword2validBtn.style.display = "none";
+            selectPassword2InvalidBtn.style.display = "block";
+            selectPassword2Input.style.border = "1px solid #e74c3c";
+            selectPassword2InvalidBtn.onmouseenter = ()=>{
+                selectPassword2ErrorMessage.classList.add("main__register__body__sign-up__error--show");
+            };
+            selectPassword2InvalidBtn.onmouseleave = ()=>{
+                selectPassword2ErrorMessage.classList.remove("main__register__body__sign-up__error--show");
+            };
+        }
+        isPassword2Ok = false;
+    }
+    enableSubmitBtn();
+}
+selectPassword2Input.onkeyup = password2Validation;
+
+let showOrHidePassword2 = () => {
+    if(selectPassword2Input.type === "password"){
+        selectPassword2Input.type = "text";
+        selectHidePassword2Btn.style.display = "none";
+        selectShowPassword2Btn.style.display = "block";
+        selectPassword2Input.focus();
+    }
+    else{
+        selectPassword2Input.type = "password";
+        selectShowPassword2Btn.style.display = "none";
+        selectHidePassword2Btn.style.display = "block";
+        selectPassword2Input.focus();
+    }
+}
+selectHidePassword2Btn.onclick = showOrHidePassword2; 
+selectShowPassword2Btn.onclick = showOrHidePassword2; 
+
+
+
+// ======================================================== Agree Configuration ===========================================================//
+const selectCheckbox = document.querySelector(".main__register__body__sign-up__check");
+let isChecked = null;
+
+selectCheckbox.onclick = () => {
+    if(selectCheckbox.checked){
+        isChecked = true;
+    }
+    else{
+        isChecked = false;
+    }
+    enableSubmitBtn();
+};
